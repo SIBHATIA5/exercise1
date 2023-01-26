@@ -1,10 +1,12 @@
-package exercise1;
 
-added simran
+package exercise1;
+import java.util.*;
+
 /**
  * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
  * It then searches the array of cards for the match to the user's card. 
  * To be used as starting code in Exercise
+ *
  *
  * @author dancye
  * @author Paul Bonenfant Jan 25, 2022 
@@ -21,9 +23,20 @@ public class CardTrick {
             card.setValue((int)(1+Math.random()*13));
             // 
             //card.setSuit(Card.SUITS[insert call to random number between 0-3 here])
+            
+           card.setSuit(Card.SUITS[(int)(0+ Math.random()*3)]);
+           hand[i]=card;
+           System.out.println(hand[i].getSuit() + hand[i].getValue());
+           
+           
             // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
             //       Don't worry about duplicates at this point
         }
+   
+    
+        
+        Scanner input = new Scanner(System.in);
+       for(int i=1; i<=7; i++);
 
         // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
