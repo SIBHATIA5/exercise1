@@ -1,6 +1,7 @@
 
 package exercise1;
 import java.util.*;
+import java.util.Random;
 
 /**
  * A class that fills a hand of 7 cards with random Card Objects and then asks the user to pick a card.
@@ -27,7 +28,8 @@ public class CardTrick {
            card.setSuit(Card.SUITS[(int)(0+ Math.random()*3)]);
            hand[i]=card;
            System.out.println(hand[i].getSuit() + hand[i].getValue());
-           
+            Random random = new Random();
+            
            
             // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
             //       Don't worry about duplicates at this point
@@ -37,6 +39,7 @@ public class CardTrick {
         
         Scanner input = new Scanner(System.in);
        for(int i=1; i<=7; i++);
+       
 
         // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
